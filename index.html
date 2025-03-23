@@ -1,102 +1,878 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luc Dompeyre - Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        header {
-            background-color: #1f1f1f;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333333;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #ffffff;
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .project {
-            background-color: #1f1f1f;
-            padding: 20px;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        }
-        .project h2 {
-            margin: 0 0 10px;
-            font-size: 1.5rem;
-            color: #ffffff;
-        }
-        .project p {
-            margin: 0;
-            font-size: 1rem;
-            color: #cccccc;
-        }
-        footer {
-            background-color: #1f1f1f;
-            padding: 20px;
-            text-align: center;
-            border-top: 2px solid #333333;
-        }
-        footer p {
-            margin: 5px 0;
-            font-size: 1rem;
-            color: #cccccc;
-        }
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Luc Dompeyre</h1>
-    </header>
-    <main>
-        <section class="projects">
-            <div class="project">
-                <h2>Projet 1</h2>
-                <p>Description du projet 1</p>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Luc Dompeyre" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Luc Dompeyre">Luc Dompeyre</h1>
+
+          <p class="title">Data Analyst / Business analyst</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-            <div class="project">
-                <h2>Projet 2</h2>
-                <p>Description du projet 2</p>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:luc.dompeyre@gmail.com" class="contact-link">luc.dompeyre@gmail.com</a>
             </div>
-            <div class="project">
-                <h2>Projet 3</h2>
-                <p>Description du projet 3</p>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-            <!-- Ajoutez d'autres projets ici -->
+
+            <div class="contact-info">
+              <p class="contact-title">Téléphone</p>
+
+              <a href="tel:+33631557814" class="contact-link">+33631557814</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Date de naissance</p>
+
+              <time datetime="1996-09-22">22 Septembre 1996</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Localisation</p>
+
+              <address>Paris, France</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">À propos de moi</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Fort d'une formation d’ingénieur et d’un parcours professionnel riche dans le commerce, le marketing et l'entrepreneuriat, j'ai récemment obtenu ma certification en analyse de données avec DataScientest. 
+          </p>
+
+          <p>
+            Cela me permet d'allier mes compétences business à une expertise technique en analyse de données. 
+            Ma compréhension approfondie des enjeux commerciaux et marketing, couplée à ma nouvelle maîtrise des outils d'analyse (SQL, Python, visualisation de données), me positionnent idéalement pour un rôle de Data Analyst ou de Business Analyst.
+          </p>
         </section>
-    </main>
-    <footer>
-        <p>Contactez-moi :</p>
-        <p>Email : <a href="mailto:luc.dompeyre@example.com">luc.dompeyre@example.com</a></p>
-        <p>Téléphone : +33 6 12 34 56 78</p>
-    </footer>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Mes compétences</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/communication.png" alt="communication icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Communication</h4>
+
+                <p class="service-item-text">
+                  Présentation efficace des résultats d'analyse à différents publics, rédaction de rapports détaillés, animation de réunions de restitution
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/metier.png" alt="metier icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Compréhension des enjeux métier</h4>
+
+                <p class="service-item-text">
+                  Capacité à identifier les besoins business clés, à traduire les objectifs en analyses pertinentes et à proposer des solutions data-driven adaptées
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/code.png" alt="analysis icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Outils d'analyse</h4>
+
+                <p class="service-item-text">
+                  Manipulation avancée de Python et SQL pour l'extraction et le traitement des données, analyse statistique.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/vizualisation.png" alt="vizualisation icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Business Intelligence</h4>
+
+                <p class="service-item-text">
+                  Création de tableaux de bord et rapports via Power BI et Looker, mise en forme des graphiques
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+ 
+          <h3 class="h3 testimonials-title">Portfolio Data</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/streamlit.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Projet Paris Sportifs</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    L’objectif de ce projet est de prédire de manière plus précise que celles des bookmakers les résultats des matchs de tennis ATP et ceci via l'entraînement de modèles de Machine Learning performant. 
+                    <a href="https://ldportfolioio-2gceyqpxxhttonhkyg4xwp.streamlit.app/" target="_blank" rel="noopener noreferrer">Accéder au projet</a>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/power BI.png" alt="Power BI" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Power BI</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Rapport sur les données réelles anonymisées d’une entreprise qui créé et commercialise des produits marketing.
+                    <a href="files/Power BI_Luc_Dompeyre.pbix.zip" download="mon-fichier.pdf">Télécharger le rapport Power BI</a>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/looker.png" alt="Looker" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Looker</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Rapport sur les données démographiques et de développement de chaque pays du monde.
+                    <a href="https://lookerstudio.google.com/s/ild22nFEKCg" target="_blank" rel="noopener noreferrer">Accéder au rapport</a>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Mon CV</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Formation</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">DataScientest / MINES Paris - PSL</h4>
+
+              <span>2025</span>
+
+              <p class="timeline-text">
+                Formation  certifiante  en  Data  Analyse  avec  focus  sur  les  outils  et technologies modernes d'analyse de données. 
+              </p>
+
+              <p class="timeline-text">
+                - Toutes  les  certications  validées  :  Power  BI,  Looker  Studio,  SQL, Python, Machine Learning, Text Mining, Web Scraping, etc.
+              </p>
+              <p class="timeline-text">
+                - Projet transverse d'analyse de données : Paris sportifs sur les matchs de tennis ATP avec présentation orale devant des experts.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Diplôme d'ingénieur ICAM - Toulouse</h4>
+
+              <span>2016 — 2019</span>
+
+              <p class="timeline-text">
+                L'Icam forme des ingénieurs de type Arts et Métiers, pluridisciplinaires et polyvalents, destinés à occuper des fonctions diverses dans tous les domaines de l'industrie et des services.
+                La formation d'ingénieur Icam s'appuie sur 6 grands domaines : génie mécanique, génie électrique et informatique, génie industriel et productique, matériaux, énergétique, formation humaine.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Classes Préparatoires PTSI - Toulouse</h4>
+
+              <span>2014 — 2016</span>
+
+              <p class="timeline-text">
+                La prépa PTSI associe à parts égales mathématiques, physique-chimie et sciences industrielles de l'ingénieur. L'objectif est de préparer à l'analyse et à la conception des systèmes complexes industriels.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Expériences</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Entrepreneur</h4>
+
+              <span>2023 — 2024</span>
+
+              <p class="timeline-text">
+                Création d'une agence de marketing digital éco-responsable.
+              </p>
+              <p class="timeline-text">
+                - Création  et  commercialisation  d’une  offre  B2B  (business  plan, prospection, recueil+ analyse de besoins, création de suivis clientèles) - Gestion de projet (planication, analyse des données, création de KPI, suivi budgétaire) et recherche de partenariats.
+              </p>
+              <p class="timeline-text">
+                - Création de tunnels de ventes (inbound et outband marketing)
+              </p>
+              <p class="timeline-text">
+                - Gestion de l’administratif et du juridique
+              </p>
+              <p class="timeline-text">
+                Outils : Excel, Notion, Hubspot, Canva, Zapier, Google Workspace
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sales</h4>
+
+              <span>2022</span>
+
+              <p class="timeline-text">
+                J’ai intégré l’équipe commerciale d’une start-up marketing experte en gamication pour l’acquisition et délisation de clientèle.
+              </p>
+              <p class="timeline-text">
+                - Prospection et vente de solutions marketing digitales
+              </p>
+              <p class="timeline-text">
+                - Gestion de CRM interne
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Ingénieur d'affaires</h4>
+
+              <span>2020 - 2022</span>
+
+              <p class="timeline-text">
+                J'ai pu évoluer pendant 2 ans en tant qu’ingénieur d’affaires IT dans deux sociétés de conseil en ingénierie.
+              </p>
+              <p class="timeline-text">
+                - Création et développement d’un portefeuille clients (prospection, délisation et accompagnement clients)
+              </p>
+              <p class="timeline-text">
+                - Recueil de besoins, analyse technique et recherche de solutions,
+              </p>
+              <p class="timeline-text">
+                - Rédaction de propositions technico-commerciales
+              </p>
+              <p class="timeline-text">
+                -    Pilotage    d’une    activité    de    recrutement    (entretiens,    suivi, propositions salariales, accompagnement des nouveaux embauchés) 
+              </p>
+              <p class="timeline-text">
+                - Management d’une équipe de 12 consultants (data analyst, data engineer, développeurs, Product Owner, Scrum, DevOps, etc.)
+              </p>
+              <p class="timeline-text">
+                - Gestion d’un centre de profits de plus d’1M euros de CA annuel 
+              </p>
+              <p class="timeline-text">  
+                Outils : CRM interne, LinkedIn, Excel
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Mes compétences</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Compétences Techniques </h5>
+                <p class="timeline-text">Maîtrise des outils d’analyse (SQL, Python, Excel, Power BI, Looker), bases de données, statistiques</p>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Compétences Analytiques</h5>
+                <p class="timeline-text">Capacité à interpréter les données, identifier des tendances, résoudre des problèmes.</p>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Gestion de projet & métier</h5>
+                <p class="timeline-text">Compréhension des processus business, marketing, gestion des exigences</p>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Communication & soft skills</h5>
+                <p class="timeline-text">Recueil de besoin, vulgarisation des analyses, storytelling, collaboration, adaptabilité</p>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
