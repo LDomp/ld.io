@@ -101,7 +101,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
   filterBtn[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
+    let selectedValue = this.dataset.filterValue;
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
@@ -155,3 +155,43 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// === PROJET MODAL ===
+
+const projectItems = document.querySelectorAll("[data-project-item]");
+const projectModalContainer = document.querySelector("[data-project-modal-container]");
+const projectModalCloseBtn = document.querySelector("[data-project-modal-close-btn]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+
+const modalProjectImg = document.querySelector("[data-project-modal-img]");
+const modalProjectTitle = document.querySelector("[data-project-modal-title]");
+const modalProjectText = document.querySelector("[data-project-modal-text]");
+const modalProjectLink = document.querySelector("[data-project-modal-link]");
+
+
+const toggleProjectModal = () => {
+  projectModalContainer.classList.toggle("active");
+  projectOverlay.classList.toggle("active");
+};
+
+projectItems.forEach(item => {
+  const trigger = item.querySelector("[data-project-trigger]");
+
+  trigger.addEventListener("click", () => {
+    modalProjectImg.src = item.querySelector("[data-project-img]").src;
+    modalProjectImg.alt = item.querySelector("[data-project-img]").alt;
+    modalProjectTitle.textContent = item.querySelector("[data-project-title]").textContent;
+    modalProjectText.innerHTML = item.querySelector("[data-project-text]").innerHTML;
+    modalProjectLink.href = item.querySelector("[data-project-link]").textContent;
+  
+    const customBtnText = item.querySelector("[data-project-button]");
+    modalProjectLink.textContent = customBtnText
+      ? customBtnText.textContent
+      : "Voir le projet";
+  
+    toggleProjectModal();
+  });
+});
+
+projectModalCloseBtn.addEventListener("click", toggleProjectModal);
+projectOverlay.addEventListener("click", toggleProjectModal);

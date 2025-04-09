@@ -154,9 +154,12 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
 
         </ul>
 
@@ -208,7 +211,7 @@
                 <h4 class="h4 service-item-title">Communication</h4>
 
                 <p class="service-item-text">
-                  Recueil de besoins, présentation efficace des résultats d'analyse à différents publics, rédaction de rapports détaillés, animation de réunions de restitution
+                  Recueil de besoins, présentation efficace des résultats d'analyse à différents publics, rédaction de rapports détaillés, animation de réunions de restitution.
                 </p>
               </div>
 
@@ -224,7 +227,7 @@
                 <h4 class="h4 service-item-title">Compréhension des enjeux métier</h4>
 
                 <p class="service-item-text">
-                  Capacité à identifier les besoins business clés, à traduire les objectifs en analyses pertinentes et à proposer des solutions data-driven adaptées
+                  Capacité à identifier les besoins business clés, à traduire les objectifs en analyses pertinentes et à proposer des solutions data-driven adaptées.
                 </p>
               </div>
 
@@ -256,10 +259,26 @@
                 <h4 class="h4 service-item-title">Business Intelligence</h4>
 
                 <p class="service-item-text">
-                  Capacité à interpréter les données, créer des tableaux de bord et rapports via Power BI et Looker, mettre en forme des graphiques, réaliser le storytelling
+                  Capacité à interpréter les données, créer des tableaux de bord et rapports via Power BI et Looker, mettre en forme des graphiques, réaliser le storytelling.
                 </p>
               </div>
 
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/automation.png" alt="automatisation icon" width="40">
+              </div>
+            
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Automatisation & Workflow Data</h4>
+            
+                <p class="service-item-text">
+                  Création de chaînes automatisées pour nettoyer, structurer et enrichir les données via n8n, Python et APIs (Google Sheets, GPT-4).
+                </p>
+              </div>
+            
             </li>
 
           </ul>
@@ -269,7 +288,7 @@
 
         <!--
           - testimonials
-        -->
+
 
         <section class="testimonials">
  
@@ -337,7 +356,7 @@
           </ul>
 
         </section>
-
+        -->
 
         <!--
           - testimonials modal
@@ -386,11 +405,317 @@
 
       </article>
 
-
-
-
-
       <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn data-select-item data-filter-value="all">Tous</button>
+            </li>
+          
+            <li class="filter-item">
+              <button data-filter-btn data-select-item data-filter-value="streamlit">Streamlit</button>
+            </li>
+          
+            <li class="filter-item">
+              <button data-filter-btn data-select-item data-filter-value="looker studio">Looker Studio</button>
+            </li>
+          
+            <li class="filter-item">
+              <button data-filter-btn data-select-item data-filter-value="power bi">Power BI</button>
+            </li>
+          
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="all">Tous</button>
+              </li>
+            
+              <li class="select-item">
+                <button data-select-item data-filter-value="streamlit">Streamlit</button>
+              </li>
+            
+              <li class="select-item">
+                <button data-select-item data-filter-value="looker studio">Looker Studio</button>
+              </li>
+            
+              <li class="select-item">
+                <button data-select-item data-filter-value="power bi">Power BI</button>
+              </li>
+            
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="looker studio" data-project-item>
+              <a href="#" data-project-trigger>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/marketing1.png" alt="Projet Marketing Automatisé" data-project-img>
+                </figure>
+            
+                <h3 class="project-title" data-project-title>Tendances Réseaux Sociaux 2025 - Analyse Automatisée</h3>
+            
+                <div class="project-description" data-project-text style="display: none;">
+                  <strong>🎯 Objectif</strong><br>
+                  Créer une chaîne d’automatisation complète à partir d’un fichier CSV brut de publications sociales pour :<br>
+                  • Nettoyer et enrichir les données automatiquement<br>
+                  • Générer des visualisations prêtes à intégrer dans Looker Studio<br>
+                  • Produire des recommandations basées sur l’IA<br>
+                  • Documenter l’analyse dans un Google Doc<br>
+                  • Exporter les données traitées dans un Google Sheet partagé<br><br>
+            
+                  <strong>🔧 Outils utilisés</strong><br>
+                  n8n • Python • GPT-4 (OpenAI API) • Google Sheets & Docs API • Looker Studio<br><br>
+            
+                  <strong>⚙️ Workflow automatisé (n8n)</strong><br>
+                  • Lecture d’un fichier CSV<br>
+                  • Nettoyage via script Python<br>
+                  • Découpage en batchs (si nécessaire)<br>
+                  • Création d’un Google Sheet dynamique<br>
+                  • Génération d’une analyse par IA (GPT-4)<br>
+                  • Rédaction automatique dans un Google Doc<br>
+                  • Connexion Looker Studio pour reporting dynamique<br><br>
+
+                  <strong>📊 Résultat final</strong><br>
+                  • Google Sheet prêt à connecter à Looker Studio<br>
+                  • Google Doc structuré avec résumé, recommandations, formules suggérées<br>
+                  • Dashboard Looker avec KPIs, analyse par type de contenu, plateforme, engagement<br><br>
+            
+                  <strong>🚀 Compétences mises en avant</strong><br>
+                  • Automatisation (n8n, API)<br>
+                  • Traitement de données (Python, JSON/CSV)<br>
+                  • Visualisation IA (Looker Studio, GPT-4)<br>
+                  • DevOps léger (flux optimisés)<br>
+                </div>
+            
+                <span class="project-link" data-project-link style="display: none;">
+                  https://lookerstudio.google.com/s/j4ClLK4n2_Q
+                </span>
+
+                <span class="project-button-text" data-project-button style="display: none;">
+                  Accéder au rapport Looker Studio
+                </span>
+
+              </a>
+              <p class="project-category">Marketing</p>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="streamlit" data-project-item>
+              <a href="#" data-project-trigger>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/streamlit.png" alt="Projet Tennis ATP" data-project-img>
+                </figure>
+            
+                <h3 class="project-title" data-project-title>Prédictions Matchs ATP – Machine Learning</h3>
+            
+                <div class="project-description" data-project-text style="display: none;">
+                  <strong>🎯 Objectif</strong><br>
+                  Développer une application interactive de prédiction des résultats de matchs ATP, plus performante que les bookmakers.<br><br>
+            
+                  <strong>📁 Données utilisées</strong><br>
+                  • Données ATP historiques (matchs, joueurs, surfaces, scores)<br>
+                  • Cotes des bookmakers pour évaluer les écarts de performance<br><br>
+            
+                  <strong>🔧 Traitement des données</strong><br>
+                  • Nettoyage & filtrage des données pertinentes<br>
+                  • Prétraitement en vue de l'entraineement des modèles<br>
+                  • Entraînement de modèles ML (Logistic Regression, Random Forest, KNN, SVM)<br>
+                  • Sélection du meilleur modèle via GridSearchCV<br><br>
+            
+                  <strong>📊 Application Streamlit</strong><br>
+                  • Interface utilisateur intuitive pour présenter le projet et le data set<br>
+                  • Interface simple pour visualiser les résultats des modèles<br>
+                  • Écart de probabilité par rapport aux cotes réelles<br><br>
+            
+                  <strong>🧰 Outils utilisés</strong><br>
+                  Python • Pandas • Scikit-learn • Streamlit • Matplotlib<br><br>
+            
+                  <strong>✅ Livrables</strong><br>
+                  • Script Python complet<br>
+                  • Application Streamlit publique<br>
+                  • Comparatif des performances vs Bookmakers
+                </div>
+            
+                <span class="project-link" data-project-link style="display: none;">
+                  https://ldportfolioio-2gceyqpxxhttonhkyg4xwp.streamlit.app/
+                </span>
+                <span class="project-button-text" data-project-button style="display: none;">
+                  Accéder au Streamlit
+                </span>
+
+
+              </a>
+              <p class="project-category">Paris sportifs</p>
+            </li>
+
+            <li <li class="project-item active" data-filter-item data-category="power bi" data-project-item>
+              <a href="#" data-project-trigger>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/powerbi1.png" alt="Projet Power BI" data-project-img>
+                </figure>
+            
+                <h3 class="project-title" data-project-title>Analyse d’un Service Client - Indicateurs de performance</h3>
+            
+                <div class="project-description" data-project-text style="display: none;">
+                  <strong>🎯 Objectif</strong><br>
+                  Créer un tableau de bord Power BI destiné à un directeur régional pour suivre :<br>
+                  • La performance du service client<br>
+                  • Les revenus générés par les appels<br>
+                  • L’efficacité des équipes et managers<br><br>
+                
+                  <strong>📁 Données utilisées</strong><br>
+                  • Historique d’appels (2018–2021)<br>
+                  • Tarifs par année<br>
+                  • Informations sur les employés et types d’appels<br><br>
+                
+                  <strong>🔧 Traitement des données</strong><br>
+                  • Nettoyage du jeu de données<br>
+                  • Création d’un indicateur SLA (Within SLA si attente &lt; 35 sec)<br>
+                  • Modélisation relationnelle (modèle étoile)<br>
+                  • Mesures DAX : appels, durée, revenu, % SLA<br><br>
+                
+                  <strong>📊 Dashboard</strong><br>
+                  • Vue globale : KPIs, répartition par site, type, SLA<br>
+                  • Revenu par appel : Évolution annuelle, par équipe et type<br>
+                  • Performance RH : par manager, employé, équipe<br><br>
+                
+                  <strong>🧰 Outils utilisés</strong><br>
+                  Power BI • Power Query • DAX • Excel<br><br>
+                
+                  <strong>✅ Livrables</strong><br>
+                  Fichier .pbix • README explicatif • Dashboard interactif
+                </div>
+            
+                <span class="project-link" data-project-link style="display: none;">
+                  files/Power BI_Luc_Dompeyre.pbix.zip
+                </span>
+
+                <span class="project-button-text" data-project-button style="display: none;">
+                  Télécharger le rapport Power BI
+                </span>
+
+              </a>
+              <p class="project-category">Commerce</p>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="looker studio" data-project-item>
+              <a href="#" data-project-trigger>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/demographie3.png" alt="Projet géopolitique" data-project-img>
+                </figure>
+            
+                <h3 class="project-title" data-project-title>Analyse mondiale – Indicateurs économiques et sociaux</h3>
+            
+                <div class="project-description" data-project-text style="display: none;">
+                  <strong>🎯 Objectif</strong><br>
+                  Construire un tableau de bord interactif sur Looker Studio à partir de données économiques et démographiques mondiales pour analyser les différences entre pays.<br><br>
+            
+                  <strong>📁 Données utilisées</strong><br>
+                  • Source : Google Sheets (lien partagé)<br>
+                  • Indicateurs : PIB, population, natalité, mortalité, espérance de vie, électricité, IDH<br><br>
+            
+                  <strong>🔧 Traitement des données</strong><br>
+                  • Nettoyage des données dans Google Sheets<br>
+                  • Uniformisation des formats et traitement des valeurs nulles<br>
+                  • Connexion directe avec Looker Studio pour mise à jour dynamique<br><br>
+            
+                  <strong>📊 Dashboard Looker Studio</strong><br>
+                  • Carte du monde interactive (par pays)<br>
+                  • Comparaison de KPIs : PIB, IDH, électricité, espérance de vie<br>
+                  • Filtres dynamiques : continent, indicateur, seuils numériques<br><br>
+            
+                  <strong>🧰 Outils utilisés</strong><br>
+                  Google Sheets • Looker Studio<br><br>
+            
+                  <strong>✅ Livrables</strong><br>
+                  • Dashboard Looker Studio interactif et partagé<br>
+                  • Source Google Sheet nettoyée et connectée<br>
+                </div>
+            
+                <span class="project-link" data-project-link style="display: none;">
+                  https://lookerstudio.google.com/s/lm3XGwiBEQA
+                </span>
+
+                <span class="project-button-text" data-project-button style="display: none;">
+                  Accéder au rapport Looker Studio
+                </span>
+              </a>
+              <p class="project-category">Géopolitique</p>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <div class="modal-container" data-project-modal-container>
+    <div class="testimonials-modal">
+  
+      <button class="modal-close-btn" data-project-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+  
+      <div class="modal-img-wrapper">
+        <figure class="modal-avatar-box">
+          <img src="" alt="" width="80" data-project-modal-img>
+        </figure>
+      </div>
+  
+      <div class="modal-content">
+        <h4 class="modal-title" data-project-modal-title></h4>
+        <p class="modal-text" data-project-modal-text></p>
+        <a href="#" class="form-btn" target="_blank" data-project-modal-link>Voir le projet</a>
+      </div>
+  
+    </div>
+    <div class="overlay" data-project-overlay></div>
+  </div>
+
+
+  <!--
         - #RESUME
       -->
 
@@ -556,249 +881,6 @@
 
       </article>
 
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
 
 
   <!--

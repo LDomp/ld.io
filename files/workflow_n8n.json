@@ -1,0 +1,409 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "fileSelector": "/Users/luc/anaconda_projects/Python/projet_visualisation_portfolio/data.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -420,
+        -440
+      ],
+      "id": "bbf858f0-6100-482e-8d91-c8773ea80c5e",
+      "name": "Read/Write Files from Disk",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "command": "cd /Users/luc/anaconda_projects/Python/projet_visualisation_portfolio\npython3 nettoyage.py data.csv resultats.csv"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        40,
+        -440
+      ],
+      "id": "6a2c1ab1-35f9-4ba9-9e09-6a3a75c234d8",
+      "name": "Execute Command",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        -440
+      ],
+      "id": "390bdcaf-4d6f-457d-9d61-1ce27fa3bbca",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "fileSelector": "/Users/luc/anaconda_projects/Python/projet_visualisation_portfolio/résultats.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        260,
+        -440
+      ],
+      "id": "c2561e8a-44d0-46cd-9626-2e34cbc97f07",
+      "name": "Read/Write Files from Disk1"
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "/Users/luc/anaconda_projects/Python/projet_visualisation_portfolio/data.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        -440
+      ],
+      "id": "51aa9e32-6568-4ec7-9c05-9f76690dc354",
+      "name": "Read/Write Files from Disk2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        -440
+      ],
+      "id": "88d42ed9-a9fa-468a-b344-b6911c8c057d",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      rows: $input.all().map(item => item.json)\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        -440
+      ],
+      "id": "eb0bd9af-2560-488b-a765-caa40b6f3a8d",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-3.5-turbo",
+          "mode": "list",
+          "cachedResultName": "GPT-3.5-TURBO"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Tu es un expert en visualisation de données marketing et en conception de rapports Looker Studio.\n\nVoici un échantillon de données analysant les performances de contenu social media :\n{{ $json.rows.slice(0, 100) }}\n\nObjectif :\n- Fournir une analyse synthétique\n- Recommander des visualisations adaptées à Looker Studio\n- Proposer les mesures, dimensions, filtres, et champs calculés pertinents\n\nRéponds sous forme de texte clair et bien structuré, sans aucune mise en forme Markdown ni syntaxe JSON.\n\n---\n\nAnalyse globale :\n- Total de posts analysés :\n- Réseaux sociaux les plus populaires :\n- Thèmes les plus utilisés :\n- Pays les plus actifs :\n- Moyenne d'engagement global :\n\n---\n\nRecommandations de visualisations :\n\n1. Répartition des posts par plateforme  \n  Type : Diagramme en camembert  \n  Dimensions : Platform  \n  Mesures : Nombre de posts  \n  Filtres : Date, Région\n\n2. Taux d'engagement par type de contenu  \n  Type : Diagramme à barres  \n  Dimensions : Content_Type  \n  Mesures : Pourcentage d'engagement  \n  Champ calculé : (Likes + Shares + Comments) / Views\n\n3. Top thèmes par engagement  \n  Type : Tableau croisé  \n  Dimensions : Hashtag  \n  Mesures : Moyenne d'engagement, Nombre total de vues  \n  Filtres : Plateforme, Période\n\n---\n\nAutres recommandations :\n- Ajouter des indicateurs clés en haut du tableau de bord : Vues totales, Pourcentage d'engagement moyen, Nombre total de posts\n- Créer un filtre multi-plateforme pour permettre la comparaison\n- Intégrer un graphique temporel pour suivre l’évolution de l’engagement"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1460,
+        -440
+      ],
+      "id": "db98b5d0-e4fc-43db-8140-f4f387fecbb1",
+      "name": "OpenAI1",
+      "credentials": {
+        "openAiApi": {
+          "id": "bHWr0u5abdqZEuln",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        -440
+      ],
+      "id": "2d2bfaac-411d-4ad5-a4fb-6a94cdedfba7",
+      "name": "Wait",
+      "webhookId": "87056a3d-6faa-4dfa-afe0-5e078cbb884e"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "https://docs.google.com/document/d/1P1tBKFs32Q94s6XLkElMOFxe7zNRJqhKK0p1SviDzRI/edit?tab=t.0",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ $json.message.content }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1940,
+        -440
+      ],
+      "id": "695857cb-5975-463b-9be9-3d47c151a1e5",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "wRu2xb2ekGwgsyib",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "documentId": {
+          "__rl": true,
+          "value": "1eueDXwsI4vbDivVvKe3HEeW3Hc_-BsM-qKTQ1VCMcoU",
+          "mode": "list",
+          "cachedResultName": "Tendances marketing",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eueDXwsI4vbDivVvKe3HEeW3Hc_-BsM-qKTQ1VCMcoU/edit?usp=drivesdk"
+        },
+        "title": "Tendances marketing",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        700,
+        -360
+      ],
+      "id": "5cce599c-1421-4156-8e63-3f77d94b3ff3",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "5GLvZEHCSERutSnt",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1eueDXwsI4vbDivVvKe3HEeW3Hc_-BsM-qKTQ1VCMcoU",
+          "mode": "list",
+          "cachedResultName": "Tendances marketing",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eueDXwsI4vbDivVvKe3HEeW3Hc_-BsM-qKTQ1VCMcoU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1438923453,
+          "mode": "list",
+          "cachedResultName": "Tendances marketing",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eueDXwsI4vbDivVvKe3HEeW3Hc_-BsM-qKTQ1VCMcoU/edit#gid=1438923453"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        920,
+        -120
+      ],
+      "id": "9bf62acc-44bc-4d29-9f57-6f4a95f8b1a9",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "5GLvZEHCSERutSnt",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1000,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        700,
+        -140
+      ],
+      "id": "7fbbaf94-e48c-454b-9bb4-94dc4b85eb47",
+      "name": "Loop Over Items"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Read/Write Files from Disk": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Command": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk1": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk2": {
+      "main": [
+        [
+          {
+            "node": "Execute Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "OpenAI1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        []
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "fdc37e96-18c4-4a2d-92a1-4f408a8901d7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "14b2d460b70317e48838659bbdf46b4542870a79109686aa0532e7d0090f2833"
+  },
+  "id": "122pwdobqK1M2j9f",
+  "tags": []
+}

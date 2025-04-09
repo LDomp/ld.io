@@ -708,7 +708,10 @@ main {
 
 .modal-img-wrapper > img { display: none; }
 
-.modal-title { margin-bottom: 4px; }
+.modal-title { 
+  margin-bottom: 4px;
+  color: var(--white-2);
+}
 
 .modal-content time {
   font-size: var(--fs-6);
@@ -722,6 +725,23 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.modal-content {
+  max-height: 60vh; /* limite la hauteur à 60% de la fenêtre */
+  overflow-y: auto; /* active le scroll vertical */
+  padding-right: 10px; /* espace pour que le texte ne colle pas au scroll */
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* Scrollbar stylée pour Chrome/Edge */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
 
 
