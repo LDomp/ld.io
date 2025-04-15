@@ -213,7 +213,7 @@ if page == pages[0] :
     Ce projet explore les liens entre les habitudes de vie (sommeil, alimentation, sport, stress…) et le bonheur, à travers un dataset de 3 000 individus collecté entre 2019 et 2024.
     Nous allons examiner les relations entre différentes variables, visualiser les données et comprendre quels sont les habitudes qui permettent d'être plus heureux.
     """)
-    st.image("Live-longer.webp" , caption="Mode de vie et bonheur", use_column_width=True)
+    st.image("Live-longer.webp" , caption="Mode de vie et bonheur", use_container_width=True)
     
 if page == pages[1]:
     st.markdown("""
